@@ -48,6 +48,6 @@ class Jeu:
         pyxel.cls(0)
 
         # vaisseau (carre 8x8)
-        pyxel.rect(self.vaisseau_x, self.vaisseau_y, 8, 8, 1)
+        pyxel.rect(self.vaisseau_x, self.vaisseau_y, 15, 3, 2)
 
 Jeu()

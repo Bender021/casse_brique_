@@ -22,7 +22,7 @@ class Jeu:
             self.vaisseau_x += 1
         if pyxel.btn(pyxel.KEY_LEFT) and self.vaisseau_x>0:
             self.vaisseau_x += -1
-        if pyxel.btn(pyxel.KEY_DOWN) and self.vaisseau_y<120:
+        if pyxel.btn(pyxel.KEY_DOWN) and self.vaisseau_y<126:
             self.vaisseau_y += 1
         if pyxel.btn(pyxel.KEY_UP) and self.vaisseau_y>0:
             self.vaisseau_y += -1

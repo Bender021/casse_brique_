@@ -18,11 +18,11 @@ class Jeu:
     def vaisseau_deplacement(self):
         """déplacement avec les touches de directions"""
 
-        if pyxel.btn(pyxel.KEY_RIGHT) and self.vaisseau_x<120:
+        if pyxel.btn(pyxel.KEY_RIGHT) and self.vaisseau_x<125:
             self.vaisseau_x += 1
         if pyxel.btn(pyxel.KEY_LEFT) and self.vaisseau_x>0:
             self.vaisseau_x += -1
-        if pyxel.btn(pyxel.KEY_DOWN) and self.vaisseau_y<126:
+        if pyxel.btn(pyxel.KEY_DOWN) and self.vaisseau_y<125:
             self.vaisseau_y += 1
         if pyxel.btn(pyxel.KEY_UP) and self.vaisseau_y>0:
             self.vaisseau_y += -1

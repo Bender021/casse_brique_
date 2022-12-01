@@ -1,6 +1,43 @@
+
+
 import pyxel
 
 class Jeu:
+
+from Paddle import Paddle # import de la classe Paddle
+
+def setup():
+    global paddle # on declare la variable paddle comme globale
+    size(605, 400)
+    paddle = Paddle 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def __init__(self):
 
         # taille de la fenetre 128x128 pixels
@@ -9,20 +46,23 @@ class Jeu:
 
         # position initiale du vaisseau
         # (origine des positions : coin haut gauche)
-        self.vaisseau_x = 60
+        self.padle_x = 60
         self.vaisseau_y = 60
 
         pyxel.run(self.update, self.draw)
-        
+
 
     def vaisseau_deplacement(self):
         """déplacement avec les touches de directions"""
 
-        if pyxel.btn(pyxel.KEY_RIGHT) and self.vaisseau_x<125:
+        if pyxel.btn(pyxel.KEY_RIGHT) and self.padle_x<120:
             self.vaisseau_x += 1
-        if pyxel.btn(pyxel.KEY_LEFT) and self.vaisseau_x>0:
+        if pyxel.btn(pyxel.KEY_LEFT) and self.padle_x>0:
             self.vaisseau_x += -1
-
+        if pyxel.btn(pyxel.KEY_DOWN) and self.vaisseau_y<120:
+            self.vaisseau_y += 1
+        if pyxel.btn(pyxel.KEY_UP) and self.vaisseau_y>0:
+            self.vaisseau_y += -1
 
 
     # =====================================================
@@ -42,9 +82,9 @@ class Jeu:
         """création et positionnement des objets (30 fois par seconde)"""
 
         # vide la fenetre
-        pyxel.cls(4)
+        pyxel.cls(0)
 
         # vaisseau (carre 8x8)
-        pyxel.rect(self.vaisseau_x, self.vaisseau_y, 16, 1, 5)
+        pyxel.rect(self.vaisseau_x, self.vaisseau_y, 8, 8, 1)
 
 Jeu()

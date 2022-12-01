@@ -42,9 +42,9 @@ class Jeu:
         """création et positionnement des objets (30 fois par seconde)"""
 
         # vide la fenetre
-        pyxel.cls(1)
+        pyxel.cls(2)
 
         # vaisseau (carre 8x8)
-        pyxel.rect(self.vaisseau_x, self.vaisseau_y, 16, 3, 2)
+        pyxel.rect(self.vaisseau_x, self.vaisseau_y, 16, 2, 3)
 
 Jeu()

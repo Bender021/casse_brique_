@@ -5,7 +5,7 @@ class Jeu:
 
         # taille de la fenetre 128x128 pixels
         # ne pas modifier
-        pyxel.init(128, 128, title="Nuit du c0de")
+        pyxel.init(200, 200, title="Nuit du c0de")
 
         # position initiale du vaisseau
         # (origine des positions : coin haut gauche)
@@ -13,7 +13,7 @@ class Jeu:
         self.vaisseau_y = 60
 
         pyxel.run(self.update, self.draw)
-
+        
 
     def vaisseau_deplacement(self):
         """déplacement avec les touches de directions"""

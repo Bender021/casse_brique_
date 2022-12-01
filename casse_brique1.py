@@ -1,5 +1,3 @@
-
-
 import pyxel
 
 class Jeu:
